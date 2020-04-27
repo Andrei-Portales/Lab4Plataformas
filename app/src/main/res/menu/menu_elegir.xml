@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/opwrong"
+        android:icon="@drawable/ic_closewhite_24dp"
+        android:title="@string/wrong"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/opcorrect"
+        android:icon="@drawable/ic_check_white_24dp"
+        android:title="@string/wrong"
+        app:showAsAction="ifRoom"/>
+</menu>
