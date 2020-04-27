@@ -10,12 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.portales.lab4plataformas.InfoBiding
 import com.portales.lab4plataformas.R
+import com.portales.lab4plataformas.databinding.FragmentGalleryBinding
 import kotlinx.android.synthetic.main.fragment_gallery.view.*
 
 class GalleryFragment : Fragment() {
 
     private lateinit var galleryViewModel: GalleryViewModel
-    private lateinit var binding: InfoBiding
+    private lateinit var binding: FragmentGalleryBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,7 @@ class GalleryFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.overflow_menu, menu)
+
         super.onCreateOptionsMenu(menu, inflater)
     }
 
@@ -40,13 +42,14 @@ class GalleryFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel::class.java)
+        galleryViewModel = ViewModelProviders.of(this).get(GalleryViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_gallery, container, false)
-        //binding = DataBindingUtil.setContentView(activity as Activity,R.layout.fragment_gallery)
-        var info = InfoBiding(getString(R.string.info1),getString(R.string.info2))
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_gallery,container,false)
+        binding.info = InfoBiding(getString(R.string.info1),getString(R.string.info2))
         root.textView2.text = getString(R.string.info1)
         root.textView3.text = getString(R.string.info2)
+
 
         galleryViewModel.text.observe(viewLifecycleOwner, Observer {
 
