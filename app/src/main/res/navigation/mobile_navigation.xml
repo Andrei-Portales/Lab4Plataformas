@@ -42,7 +42,13 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/nav_resultado"
-        android:name="com.portales.lab4plataformas.ResultadoFragment"
+        android:name="com.portales.lab4plataformas.invitados.ResultadoFragment"
         android:label="Resultados"
         tools:layout="@layout/fragment_resultado"/>
+
+    <fragment
+        android:id="@+id/nav_invitados"
+        android:name="com.portales.lab4plataformas.invitados.InvitadosFragment"
+        android:label="Invitados"
+        tools:layout="@layout/fragment_invitados"/>
 </navigation>

@@ -1,11 +1,12 @@
-package com.portales.lab4plataformas
+package com.portales.lab4plataformas.invitados
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_resultado.*
+import com.portales.lab4plataformas.MainActivity
+import com.portales.lab4plataformas.R
 import kotlinx.android.synthetic.main.fragment_resultado.view.*
 import kotlinx.android.synthetic.main.fragment_resultado.view.txt2
 
